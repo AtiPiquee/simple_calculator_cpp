@@ -24,21 +24,32 @@ int main()
     cout << "> ";
     cin >> choice;
 
-    if (choice == 1) {
-      addition();
-    }
-    else if (choice == 2) {
+    switch (choice)
+    {
+      case 0:
+        main();
+        break;
+      
+      case 1:
+        addition();
+        break;
+
+      case 2:
       soustraction();
-    }
+      break;
 
-    else if (choice == 3) {
+      case 3:
       multiplication();
-    }
+      break;
 
-    else if (choice == 4) {
+      case 4:
       division();
-    }
+      break;
 
+      default:
+      main();
+      break;
+    }
 
     system("pause");
     return 0;
@@ -96,5 +107,7 @@ void division()
   system("pause");
   main();
 }
+
+
 
 
